@@ -1,7 +1,7 @@
 window.addEventListener("load",function(){
 
     var url_string = window.location.href;
-    url_string=url_string.replace("https://front-end-grupa3-andreamagyar15.c9users.io/Homework/Curs17-OOP/pages/gameDetails.html?id=","")
+    url_string=getUrlParameter("id");
     console.log(url_string);
     
     var game=new GameDetail();
@@ -26,3 +26,9 @@ window.addEventListener("load",function(){
         description.innerHTML=game.details;
     }
 })
+   function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
