@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homework Games</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../views/games.js"></script>
+    <script type="text/javascript" src="../models/Games.js"></script>
+    <script type="text/javascript" src="../models/GameDetails.js"></script>
+    
+</head>
+<body>
+    <button id="creatGame">Creat Game</button>
+    <div id="container">
+        
+    </div>
+    <div id="template">
+        <h3 id="gameTitle"></h3>
+        <p id="gameImage"></p>
+        <p id="gameContent"></p>
+        <section>
+             <button class="editButton">Edit</button>
+             <button id="deleteButton">Delete</button>
+        </section>
+        <p class="detailContainer"></p>
+    </div>
+    
+    <form>
+        <input type="text" name="Title" placeholder="Title" >
+        <input type="text" name="imageUrl" placeholder="Image URL">
+        <input type="text" name="genre" placeholder="Genre">
+        <input type="text" name="publisher" placeholder="Publisher">
+        <input type="text" name="release" placeholder="Release Date">
+        <input type="text" name="detailsCreat" placeholder="Description"/>
+        <br>
+        <button id="sendButton">Send</button>
+        <button id="cancelButton">Cancel</button>
+    </form> 
+</body>
+</html>
